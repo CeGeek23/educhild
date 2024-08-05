@@ -1,0 +1,329 @@
+{
+    "login": {
+      "title": "Connexion",
+      "description": "Connectez-vous à votre compte",
+      "form": {
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "submit": "Se connecter"
+      },
+      "forgot_password": "Mot de passe oublié ?",
+      "signup": {
+        "title": "S'inscrire",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua."
+      },
+      "message": {
+        "auth_failed": "Nom d'utilisateur ou mot de passe invalide"
+      }
+    },
+    "pagination": {
+      "summary": "Affichage de {{from}} à {{to}} sur {{total}} résultats",
+      "rows_per_page": "Lignes par page"
+    },
+    "signup": {
+      "title": "Inscription",
+      "description": "Créez votre compte",
+      "register_now": "Inscrivez-vous maintenant !",
+      "form": {
+        "username": "Nom d'utilisateur",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "confirm_password": "Confirmez le mot de passe",
+        "submit": "Créer un compte"
+      }
+    },
+    "action": {
+      "info": "Info",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "submit": "Soumettre",
+      "submitting": "Soumission en cours...",
+      "reset": "Réinitialiser"
+    },
+    "theme": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "auto": "Auto"
+    },
+    "dashboard": {
+      "featured": {
+        "user": "Utilisateurs",
+        "income": "Revenus",
+        "conversion_rate": "Taux de conversion",
+        "sessions": "Sessions",
+        "action": {
+          "action1": "Action",
+          "action2": "Autre action",
+          "action3": "Quelque chose d'autre"
+        }
+      },
+      "traffic": {
+        "title": "Trafic",
+        "duration": "Janvier - Juillet 2021",
+        "option": {
+          "day": "Jour",
+          "month": "Mois",
+          "year": "Année"
+        },
+        "chart": {
+          "xlabel1": "Janvier",
+          "xlabel2": "Février",
+          "xlabel3": "Mars",
+          "xlabel4": "Avril",
+          "xlabel5": "Mai",
+          "xlabel6": "Juin",
+          "xlabel7": "Juillet"
+        },
+        "users": "Utilisateurs",
+        "views": "Vues",
+        "category1": "Visites",
+        "category2": "Uniques",
+        "category3": "Pages vues",
+        "category4": "Nouveaux utilisateurs",
+        "category5": "Taux de rebond"
+      },
+      "social": {
+        "facebook": {
+          "label1": "Amis",
+          "label2": "Flux"
+        },
+        "twitter": {
+          "label1": "Abonnés",
+          "label2": "Tweets"
+        },
+        "instagram": {
+          "label1": "Contacts",
+          "label2": "Flux"
+        }
+      },
+      "sales": {
+        "title": "Trafic & Ventes",
+        "stats": {
+          "stat1": "Nouveaux Clients",
+          "stat2": "Clients récurrents",
+          "stat3": "Pages vues",
+          "stat4": "Organique"
+        },
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche",
+        "male": "Homme",
+        "female": "Femme",
+        "organic": "Recherche organique",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn"
+      },
+      "listing": {
+        "headers": {
+          "header1": "Utilisateur",
+          "header2": "Utilisation",
+          "header3": "Méthode de paiement",
+          "header4": "Activité"
+        },
+        "user_status": {
+          "new": "Nouveau",
+          "recurring": "Récurrent"
+        },
+        "registered": "Inscrit",
+        "last_login": "Dernière connexion",
+        "usage_duration": "11 juin 2020 - 10 juillet 2020",
+        "registered_at": "1 jan. 2020",
+        "items": {
+          "item1": {
+            "name": "Yiorgos Avraamu",
+            "login_at": "Il y a 10 sec"
+          },
+          "item2": {
+            "name": "Avram Tarasios",
+            "login_at": "Il y a 5 minutes"
+          },
+          "item3": {
+            "name": "Quintin Ed",
+            "login_at": "Il y a 1 heure"
+          },
+          "item4": {
+            "name": "Enéas Kwadwo",
+            "login_at": "Le mois dernier"
+          },
+          "item5": {
+            "name": "Agapetus Tadeáš",
+            "login_at": "La semaine dernière"
+          },
+          "item6": {
+            "name": "Friderik Dávid",
+            "login_at": "Hier"
+          }
+        }
+      }
+    },
+    "pokemons": {
+      "title": "Pokémon",
+      "add_new": "Ajouter nouveau",
+      "attribute": {
+        "name": "Nom",
+        "type": "Type",
+        "egg_group": "Groupe d'œuf",
+        "hp": "PV",
+        "attack": "Atq",
+        "defense": "Déf",
+        "sp_attack": "Atq Spé",
+        "sp_defense": "Déf Spé",
+        "speed": "Vit",
+        "total": "Total"
+      }
+    },
+    "featured_nav": {
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "settings": "Paramètres"
+    },
+    "notification": {
+      "message": "Vous avez {{total}} notifications",
+      "items": {
+        "new_user": "Nouvel utilisateur inscrit",
+        "deleted_user": "Utilisateur supprimé",
+        "sales_report": "Le rapport des ventes est prêt",
+        "new_client": "Nouveau client",
+        "server_overloaded": "Serveur surchargé"
+      },
+      "server": {
+        "title": "serveur",
+        "processes": "Processus",
+        "cores": "Cœurs",
+        "items": {
+          "cpu": "Utilisation CPU",
+          "memory": "Utilisation mémoire",
+          "ssd1": "Utilisation SSD 1"
+        }
+      }
+    },
+    "task": {
+      "message": "Vous avez {{total}} tâches en attente",
+      "items": {
+        "task1": "Mettre à niveau Next.JS",
+        "task2": "Entraîner les Pokémon",
+        "task3": "Compléter le Pokédex",
+        "task4": "Attraper tous les shiny",
+        "task5": "Battre tous les gymnases"
+      },
+      "view_all": "Voir toutes les tâches"
+    },
+    "messages": {
+      "message": "Vous avez {{total}} messages",
+      "items": {
+        "item1": {
+          "user": "John Doe",
+          "time": "À l'instant",
+          "title": "Caresser Pikachu",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+        },
+        "item2": {
+          "user": "John Doe",
+          "time": "Il y a 5 min",
+          "title": "Habiller Evoli",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+        },
+        "item3": {
+          "user": "John Doe",
+          "time": "13:52",
+          "title": "Entraînement en équipe",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+        },
+        "item4": {
+          "user": "John Doe",
+          "time": "16:03",
+          "title": "Aller au Parc Safari",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt"
+        }
+      }
+    },
+    "profile": {
+      "account": {
+        "title": "Compte",
+        "items": {
+          "updates": "Mises à jour",
+          "messages": "Messages",
+          "tasks": "Tâches",
+          "comments": "Commentaires"
+        }
+      },
+      "settings": {
+        "title": "Paramètres",
+        "items": {
+          "profile": "Profil",
+          "settings": "Paramètres",
+          "payments": "Paiements",
+          "projects": "Projets"
+        }
+      },
+      "lock_account": "Verrouiller le compte",
+      "logout": "Déconnexion"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "library": "Bibliothèque",
+      "data": "Données"
+    },
+    "sidebar": {
+      "items": {
+        "dashboard": "Tableau de bord",
+        "sample": "Exemple",
+        "theme": "Thème",
+        "colors": "Couleurs",
+        "typography": "Typographie",
+        "components": "Composants",
+        "accordion": "Accordéon",
+        "breadcrumb": "Fil d'Ariane",
+        "cards": "Cartes",
+        "carousel": "Carrousel",
+        "collapse": "Collapse",
+        "list_group": "Groupe de liste",
+        "navs": "Navigations",
+        "pagination": "Pagination",
+        "popovers": "Popovers",
+        "progress": "Barres de progression",
+        "scrollspy": "Scrollspy",
+        "spinners": "Spinners",
+        "tables": "Tableaux",
+        "tabs": "Onglets",
+        "tooltips": "Infobulles",
+        "buttons": "Boutons",
+        "buttons_group": "Groupe de boutons",
+        "dropdowns": "Listes déroulantes",
+        "charts": "Graphiques",
+        "form_control": "Contrôle de formulaire",
+        "select": "Sélection",
+        "checks_and_radios": "Cases à cocher et boutons radio",
+        "range": "Plage",
+        "input_group": "Groupe de saisie",
+        "floating_labels": "Étiquettes flottantes",
+        "layout": "Mise en page",
+        "validation": "Validation",
+        "core_ui_icons": "Icônes CoreUI",
+        "core_ui_icons_brand": "Icônes CoreUI - Marque",
+        "core_ui_icons_flag": "Icônes CoreUI - Drapeau",
+        "alerts": "Alertes",
+        "badge": "Badge",
+        "modals": "Fenêtres modales",
+        "toasts": "Notifications toast",
+        "widgets": "Widgets",
+        "login": "Connexion",
+        "register": "Inscription",
+        "error404": "Erreur 404",
+        "error500": "Erreur 500",
+        "docs": "Documentation",
+        "try_core_ui_pro": "Essayer CoreUI PRO",
+        "base": "Base",
+        "forms": "Formulaires",
+        "icons": "Icônes",
+        "notifications": "Notifications",
+        "extras": "Extras",
+        "pages": "Pages"
+      }
+    }
+  }

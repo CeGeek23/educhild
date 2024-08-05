@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .border-dash-long {
+    border-style: dashed;
+    border-image: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 5px,
+      currentColor 5px,
+      currentColor 10px
+    );
+    border-image-slice: 1;
+  }
+}
+
+:root {
+    --primary: #363aed;
+    --secondary: #37d279;
+    --tertiary: #ffbe46;
+    --bg-1: #f9f9fe;
+    --bg-2:#F5F5FE;
+    --btn-bg:#EFEFFD;
+    --border:#C2C7D0;
+    --neutral-700:#243757;
+    --primary-light: #ECECFD;
+    --secondary-light: #EAFBF1;
+    --secondary-500:#22804A;
+    --dark:#091E42;
+  }
+input:checked + div {  
+  @apply border-[var(--primary)];  
+
+}  
+input:checked + div svg {      
+  @apply block;  
+}
+.scrollbar-hide::-webkit-scrollbar{
+
+display: none;}

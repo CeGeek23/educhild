@@ -54,7 +54,7 @@ export default async function SidebarNav() {
       </SidebarNavGroup>
 
       <SidebarNavTitle>{dict.sidebar.items.theme}</SidebarNavTitle>
-      <SidebarNavItem icon={faLocationArrow} href="#">{dict.sidebar.items.buttons}</SidebarNavItem>
+      <SidebarNavItem icon={faLocationArrow} href="#">Localiser</SidebarNavItem>
 
       <SidebarNavGroup toggleIcon={faBell} toggleText={dict.sidebar.items.notifications}>
         <SidebarNavItem href="#">{dict.sidebar.items.alerts}</SidebarNavItem>

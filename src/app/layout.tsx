@@ -1,12 +1,14 @@
 import '@/styles/globals.scss'
-// Next.js allows you to import CSS directly in .js files.
-// It handles optimization and all the necessary Webpack configuration to make this work.
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import DictionaryProvider from '@/locales/DictionaryProvider'
 import { getDictionary } from '@/locales/dictionary'
 import getTheme from '@/themes/theme'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import persistStore from 'redux-persist/es/persistStore'
+import StoreProvider from '@/redux/storeProvider'
 
 // You change this configuration value to false so that the Font Awesome core SVG library
 // will not try and insert <style> elements into the <head> of the page.
@@ -14,21 +16,29 @@ import getTheme from '@/themes/theme'
 // See https://fontawesome.com/v6/docs/web/use-with/react/use-with#next-js
 config.autoAddCss = false
 
+// store to persist
+// const persistedStore = persistStore(store)
+// const helmetContext = {}
+
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   const dictionary = await getDictionary()
 
   return (
     <html lang="en" data-bs-theme={getTheme()}>
-      <body>
-        <ProgressBar />
-        <DictionaryProvider dictionary={dictionary}>
-          {children}
-        </DictionaryProvider>
-      </body>
+          <body>
+            <ProgressBar />
+            <DictionaryProvider dictionary={dictionary}>
+              <StoreProvider>
+              {children}
+              </StoreProvider>
+              
+            </DictionaryProvider>
+          </body>
+       
     </html>
   )
 }

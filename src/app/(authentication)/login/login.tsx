@@ -13,51 +13,82 @@ import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import useDictionary from '@/locales/dictionary-hook'
 
+//IMPORT API ENPOINT FOR AUTH
+import { Auth } from '@/request/auth'
+
 export default function Login({ callbackUrl }: { callbackUrl: string }) {
+
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
   const router = useRouter()
   const dict = useDictionary()
 
-  const login = async (formData: FormData) => {
-    setSubmitting(true)
+  // instace of class auth 
+  const auth = new Auth()
 
-    try {
-      const res = await signIn('credentials', {
-        username: formData.get('username'),
-        password: formData.get('password'),
-        redirect: false,
-        callbackUrl,
+  const [formDatas, setFormData] = useState<{
+    // username: string;
+    email: string;
+    password: string;
+  }>({
+    // username: '',
+    email: '',
+    password: '',
+  });
+
+  const handleChange =(fieldName:string,value : string | number )=>{
+      setFormData({
+        ...formDatas,
+        [fieldName]:value
       })
-
-      if (!res) {
-        setError('Login failed')
-        return
-      }
-
-      const { ok, url, error: err } = res
-
-      if (!ok) {
-        if (err) {
-          setError(err)
-          return
-        }
-
-        setError('Login failed')
-        return
-      }
-
-      if (url) {
-        router.push(url)
-      }
-    } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message)
-      }
-    } finally {
-      setSubmitting(false)
-    }
   }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // USE THE ENDPOINT
+    auth.login({formData:formDatas})
+
+    console.log(formDatas);
+  };
+  // const login = async (formData: FormData) => {
+  //   setSubmitting(true)
+
+  
+  //   try {
+  //     const res = await signIn('credentials', {
+  //       username: formData.get('username'),
+  //       password: formData.get('password'),
+  //       redirect: false,
+  //       callbackUrl,
+  //     })
+
+  //     if (!res) {
+  //       setError('Login failed')
+  //       return
+  //     }
+
+  //     const { ok, url, error: err } = res
+
+  //     if (!ok) {
+  //       if (err) {
+  //         setError(err)
+  //         return
+  //       }
+
+  //       setError('Login failed')
+  //       return
+  //     }
+
+  //     if (url) {
+  //       router.push(url)
+  //     }
+  //   } catch (err) {
+  //     if (err instanceof Error) {
+  //       setError(err.message)
+  //     }
+  //   } finally {
+  //     setSubmitting(false)
+  //   }
+  // }
 
   return (
     <>
@@ -69,7 +100,7 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
       >
         {error}
       </Alert>
-      <Form action={login}>
+      <Form >
         <InputGroup className="mb-3">
           <InputGroupText>
             <FontAwesomeIcon
@@ -86,7 +117,25 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
             defaultValue="Username"
           />
         </InputGroup>
+        <InputGroup className="mb-3">
+          <InputGroupText>
+            <FontAwesomeIcon
+              icon={faLock}
+              fixedWidth
+            />
+          </InputGroupText>
+          <FormControl
+            type="email"
+            name="email"
+            required
+            disabled={submitting}
+            placeholder={'enter your email '}
+            aria-label="email"
+            onChange={(e)=> handleChange('email',e.target.value)}
+           
 
+          />
+        </InputGroup>
         <InputGroup className="mb-3">
           <InputGroupText>
             <FontAwesomeIcon
@@ -102,6 +151,9 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
             placeholder={dict.login.form.password}
             aria-label="Password"
             defaultValue="Password"
+            
+            onChange={(e)=> handleChange('password',e.target.value)}
+
           />
         </InputGroup>
 
@@ -112,8 +164,9 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
               variant="primary"
               type="submit"
               disabled={submitting}
-            >
+              onClick={(e) => handleSubmit(e)}            >
               {dict.login.form.submit}
+
             </Button>
           </Col>
           <Col xs={6} className="text-end">

@@ -8,12 +8,7 @@ export default async function HeaderFeaturedNav() {
     <Nav>
       <NavItem>
         <Link href="/" passHref legacyBehavior>
-          <NavLink className="p-2">{dict.featured_nav.dashboard}</NavLink>
-        </Link>
-      </NavItem>
-      <NavItem>
-        <Link href="#" passHref legacyBehavior>
-          <NavLink className="p-2">{dict.featured_nav.users}</NavLink>
+          <NavLink className="p-2">Summary</NavLink>
         </Link>
       </NavItem>
       <NavItem>

@@ -10,31 +10,37 @@ import { useState } from 'react'
 import Link from 'next/link'
 import InputGroupText from 'react-bootstrap/InputGroupText'
 import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+
 import useDictionary from '@/locales/dictionary-hook'
 
 //IMPORT API ENPOINT FOR AUTH
 import { Auth } from '@/request/auth'
+import { useAppDispatch } from '@/redux/hooks'
+import { useRouter } from 'next/navigation'
 
 export default function Login({ callbackUrl }: { callbackUrl: string }) {
 
   const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState('')
-  const router = useRouter()
+ 
   const dict = useDictionary()
 
   // instace of class auth 
   const auth = new Auth()
 
+  //PROPS OF FONCTIONS THAT COOL ENDPOINT
+  const dispatch = useAppDispatch()
+  const [loading,setLoading] =useState<Boolean>(false)
+  const router = useRouter()
+  const [error, setError] = useState('')
+
   const [formDatas, setFormData] = useState<{
-    // username: string;
-    email: string;
-    password: string;
-  }>({
-    // username: '',
-    email: '',
-    password: '',
-  });
+        email: string;
+        password: string;
+      }>({
+        // username: '',
+        email: '',
+        password: '',
+      });
 
   const handleChange =(fieldName:string,value : string | number )=>{
       setFormData({
@@ -45,7 +51,7 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // USE THE ENDPOINT
-    auth.login({formData:formDatas})
+    auth.login({dispatch:dispatch,formData:formDatas,navigate:router,handleChangeLoading:(state)=>{setLoading(state)}})
 
     console.log(formDatas);
   };
@@ -101,22 +107,7 @@ export default function Login({ callbackUrl }: { callbackUrl: string }) {
         {error}
       </Alert>
       <Form >
-        <InputGroup className="mb-3">
-          <InputGroupText>
-            <FontAwesomeIcon
-              icon={faUser}
-              fixedWidth
-            />
-          </InputGroupText>
-          <FormControl
-            name="username"
-            required
-            disabled={submitting}
-            placeholder={dict.login.form.username}
-            aria-label="Username"
-            defaultValue="Username"
-          />
-        </InputGroup>
+        
         <InputGroup className="mb-3">
           <InputGroupText>
             <FontAwesomeIcon

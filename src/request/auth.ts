@@ -48,7 +48,7 @@ export  class Auth  {
             console.log(dispatch)
             handleChangeLoading? handleChangeLoading(false):null
             navigate?.push('/')
-            alert('test')
+            
             
         })
            .catch((error)=>{

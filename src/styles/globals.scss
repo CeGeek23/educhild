@@ -1,4 +1,7 @@
 $enable-negative-margins: true;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import "~bootstrap/scss/bootstrap";
 

@@ -41,6 +41,7 @@ export default async function SidebarNav() {
       <SidebarNavItem icon={faFaceSmile} href="/pokemons">
         My Family
       </SidebarNavItem>
+      <SidebarNavItem icon={faLocationArrow} href="/children">my children</SidebarNavItem>
 
       <SidebarNavItem icon={faAndroid} href="#">{dict.sidebar.items.devices}</SidebarNavItem>
 
@@ -50,6 +51,7 @@ export default async function SidebarNav() {
         <SidebarNavItem icon={faBug} href="report_app">{dict.sidebar.items.report_application}</SidebarNavItem>
       </SidebarNavGroup>
       <SidebarNavItem icon={faLocationArrow} href="/location">Locate your children</SidebarNavItem>
+
 
       <SidebarNavGroup toggleIcon={faBell} toggleText={dict.sidebar.items.notifications}>
         <SidebarNavItem href="#">{dict.sidebar.items.alerts}</SidebarNavItem>
